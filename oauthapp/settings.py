@@ -72,7 +72,7 @@ ROOT_URLCONF = 'oauthapp.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'oauthapp/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
