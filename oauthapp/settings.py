@@ -40,6 +40,8 @@ INSTALLED_APPS = [
 
     'django.contrib.sites',
 
+    'main',
+
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
@@ -132,6 +134,12 @@ SOCIALACCOUNT_PROVIDERS = {
 
 
 ACCOUNT_AUTHENTICATED_LOGIN_REDIRECTS = True
+
+SOCIALACCOUNT_ADAPTER = 'main.models.CustomSocialAccountAdapter'
+
+ACCOUNT_FORMS = {
+    'login': 'main.forms.LoginForm.MyCustomLoginForm',
+}
 
 
 LOGIN_REDIRECT_URL = "/"
