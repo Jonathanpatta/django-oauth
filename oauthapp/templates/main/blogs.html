@@ -1,9 +1,6 @@
 {% extends 'main/header.html' %}
 
 {% block content %}
-
-    
-
     <div class="container-fluid " style="width: 80%">
         {% for blog in blogs %}
             <div class="row align-items-center my-md-n5">
@@ -12,7 +9,7 @@
                         <h5 class="card-title ">{{blog.title}}</h5>
                         <h6 class="card-subtitle mb-2 text-muted">{{blog.author}}</h6>
                         <p class="card-text">{{blog.description}}</p>
-                        <a href="blog/{{blog.id}}" class="card-link">Read Blog</a>
+                        <a href="/blog/{{blog.id}}" class="card-link">Read Blog</a>
                         <a href="#" class="card-link">Another link</a>
                     </div>
                 </div>
@@ -20,8 +17,5 @@
             </div>
 
         {% endfor %}
-    </div>
-
-        
-    </div>
+    </div> 
 {% endblock content %}

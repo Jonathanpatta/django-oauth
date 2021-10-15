@@ -1,0 +1,16 @@
+{% extends 'main/header.html' %}
+{% block content %}
+
+<div class="container-fluid " style="width: 80%">
+    <ul class="list-group">
+
+        {% for act  in activities %}
+            <li class="list-group-item">{{act.blog.title}}</li>
+        {% endfor %}
+      </ul>
+    {% for blog in blogs %}
+        
+
+    {% endfor %}
+</div>
+{% endblock content %}

@@ -18,8 +18,12 @@ from django.urls import path,include
 
 from . import views
 
+app_name = 'main'
+
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('accounts/', include('allauth.urls')),
-    path('',include('main.urls')),
+    path('',views.home),
+    path('profile/',views.Profile,name="profile"),
+    path('blog/<slug:id>',views.BlogView,name="BlogView"),
+    path('blogs/',views.BlogsView,name="BlogsView"),
+    path('history/',views.HistoryView,name="HistoryView")
 ]
